@@ -1,82 +1,16 @@
 # code-with-quarkus
 
-This project uses Quarkus, the Supersonic Subatomic Java Framework.
+# quarkus프로젝트시작! (학번: 20231405 이름: 박원빈)
+매주수업내용을정리하자.
+## 2주차수업내용
+실습1 : 쿼크스환경구축및준비완료!
+실습2 : HTML 기본및LOL 메인화면개발완료!
 
-If you want to learn more about Quarkus, please visit its website: <https://quarkus.io/>.
-
-## Running the application in dev mode
-
-You can run your application in dev mode that enables live coding using:
-
-```shell script
-./mvnw quarkus:dev
-```
-
-> **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at <http://localhost:8080/q/dev/>.
-
-## Packaging and running the application
-
-The application can be packaged using:
-
-```shell script
-./mvnw package
-```
-
-It produces the `quarkus-run.jar` file in the `target/quarkus-app/` directory.
-Be aware that it’s not an _über-jar_ as the dependencies are copied into the `target/quarkus-app/lib/` directory.
-
-The application is now runnable using `java -jar target/quarkus-app/quarkus-run.jar`.
-
-If you want to build an _über-jar_, execute the following command:
-
-```shell script
-./mvnw package -Dquarkus.package.jar.type=uber-jar
-```
-
-The application, packaged as an _über-jar_, is now runnable using `java -jar target/*-runner.jar`.
-
-## Creating a native executable
-
-You can create a native executable using:
-
-```shell script
-./mvnw package -Dnative
-```
-
-Or, if you don't have GraalVM installed, you can run the native executable build in a container using:
-
-```shell script
-./mvnw package -Dnative -Dquarkus.native.container-build=true
-```
-
-You can then execute your native executable with: `./target/code-with-quarkus-1.0.0-SNAPSHOT-runner`
-
-If you want to learn more about building native executables, please consult <https://quarkus.io/guides/maven-tooling>.
-
-## Related Guides
-
-- REST ([guide](https://quarkus.io/guides/rest)): A Jakarta REST implementation utilizing build time processing and Vert.x. This extension is not compatible with the quarkus-resteasy extension, or any of the extensions that depend on it.
-- Qute Web ([guide](https://quarkiverse.github.io/quarkiverse-docs/quarkus-qute-web/dev/index.html)): Serves Qute templates directly over HTTP.
-- Qute ([guide](https://quarkus.io/guides/qute)): Offer templating support for web, email, etc in a build time, type-safe way
-- OpenID Connect ([guide](https://quarkus.io/guides/security-openid-connect)): Verify Bearer access tokens and authenticate users with Authorization Code Flow
-- WebSockets ([guide](https://quarkus.io/guides/websockets)): WebSocket communication channel support
-
-## Provided Code
-
-### Qute Web
-
-Qute templates like `some-page.html` served via HTTP automatically by Quarkus from the `src/main/resource/templates/pub` directory. No controllers needed. Once the quarkus app is started visit the generated page at http://localhost:8080/some-page?name=World
-
-[Related guide section...](https://docs.quarkiverse.io/quarkus-qute-web/dev/index.html)
-
-### REST
-
-Easily start your REST Web Services
-
-[Related guide section...](https://quarkus.io/guides/getting-started-reactive#reactive-jax-rs-resources)
-
-### WebSockets
-
-WebSocket communication channel starter code
-
-[Related guide section...](https://quarkus.io/guides/websockets)
+## 3주차수업내용
+테스트, 깃허브 개설완료
+프론트엔드: 몰입형 경험을 위해 마이크로 인터랙션과 호버/커서 피드백을 활용한 상호작용 디자인을 강조한다.
+백엔드: 서버 중앙 집중형에서 탈피한 Web 3.0(탈중앙화/블록체인)의 현실화와 AI를 활용한 자동 결제 및 보안 강화를 다룬다.
+AI 개발 환경: 단순 코드 자동 완성을 넘어, AI가 파일과 웹에 직접 접근해 수십 개의 작업을 수행하는 AI 에이전트(AI 바이브코딩) 시대로의 변화를 분석한다.
+부트스트랩 5 활용: CDN 방식으로 최신 버전을 연동하고, 네비게이션 바(Navbar)와 반응형 레이아웃의 구조를 분석 및 수정한다. 
+하이퍼링크와 경로: 외부 링크 연결과 로컬 이미지의 상대 경로/절대 경로 차이를 익히고, HTTP 상태 코드(200, 404 등)의 의미를 학습한다. 
+그리드 및 모달: Bootstrap Grid 시스템으로 챔피언 카드를 배치하고, iframe을 삽입한 모달창을 구현해 세부 정보를 띄우는 심화 기술을 실습한다.
