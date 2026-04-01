@@ -51,12 +51,12 @@ a class="navbar-brand" href="#"
 ul class="navbar-nav mx-auto mb-2 mb-lg-0"
 챔피언 3명 추가
 각 영웅의 modals 3개 추가
-<divalign="center">
-<img src="screenshots\스크린샷 2026-04-01 203900.png"width="45%"alt="실습1 화면">
-<img src="screenshots\스크린샷 2026-04-01 204105.png"width="45%"alt="실습2 화면">
-<img src="screenshots\스크린샷 2026-04-01 204115.png"width="45%"alt="실습3 화면">
-<img src="screenshots\스크린샷 2026-04-01 204126.png"width="45%"alt="실습4 화면">
-<img src="screenshots\스크린샷 2026-04-01 204521.png"width="45%"alt="실습5 화면">
+<div align="center">
+<img src="screenshots\스크린샷 2026-04-01 203900.png" width="45%" alt="실습1 화면">
+<img src="screenshots\스크린샷 2026-04-01 204105.png" width="45%" alt="실습2 화면">
+<img src="screenshots\스크린샷 2026-04-01 204115.png" width="45%" alt="실습3 화면">
+<img src="screenshots\스크린샷 2026-04-01 204126.png" width="45%" alt="실습4 화면">
+<img src="screenshots\스크린샷 2026-04-01 204521.png" width="45%" alt="실습5 화면">
 </div>
 <br>
 코드는 수업자료를 바탕으로 작성하였다.
