@@ -32,3 +32,30 @@ _top - 최상위 프레임
 네비바의 색갈을 검은색으로 바꾸었다.
 아트록스 챔피언 카드를 추가하였다.
 아트록스 카드 모달창을 구현하였다.
+
+## 5주차수업내용
+
+모달창에서 안에 내용을 구현하였다.
+상대경로 ../image/A1.jpeg 이미지 위치를 지정하였다.
+서브페이지 다운로드 페이지를 구현하였다.
+다운로드 페이지에서 링크를 연동해서 lll.exe 파일을 다운로드 하게 하였다.
+download.css에서 '../image/down.wb.jpeg' 연동해서 사진이 홈페이지에 나오도록 하였다.
+download.html에 link rel="stylesheet" href="../css/download.css" 를 추가하여 디자인을 수정하였다.
+download_table.html의 있는 내용을 download.html에 붙어넣어 최하단 시스템 사양 테이블 표를 추가하였다.
+- 실습과제 - 
+롤 로고 생성
+a class="navbar-brand" href="#"
+            img src="../image/Logo.jpeg" alt="LOL Logo" width="30" height="30"
+        /a
+네비바 가운데 정렬
+ul class="navbar-nav mx-auto mb-2 mb-lg-0"
+챔피언 3명 추가
+각 영웅의 modals 3개 추가
+<divalign="center">
+<img src="screenshots\스크린샷 2026-04-01 203900.png"width="45%"alt="실습1 화면">
+<img src="screenshots\스크린샷 2026-04-01 204105.png"width="45%"alt="실습2 화면">
+<img src="screenshots\스크린샷 2026-04-01 204115.png"width="45%"alt="실습3 화면">
+<img src="screenshots\스크린샷 2026-04-01 204126.png"width="45%"alt="실습4 화면">
+</div>
+<br>
+코드는 수업자료를 바탕으로 작성하였다.
