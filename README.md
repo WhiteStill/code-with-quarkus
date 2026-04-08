@@ -23,7 +23,7 @@ _self - 현재 탭 (기본값)
 _blank - 새 탭
 _parent - 부모 프레임
 _top - 최상위 프레임
-<imgsrc=“ “>
+imgsrc=“ “
 • 다수의 이미지를 나열
 • 외부주소로 부터 이미지 로딩함
 다운받은 사진을 \resources에 새폴더를 생성해서 연동하였다.
@@ -60,3 +60,33 @@ ul class="navbar-nav mx-auto mb-2 mb-lg-0"
 </div>
 <br>
 코드는 수업자료를 바탕으로 작성하였다.
+
+## 6주차수업내용
+
+JS 폴더 생성해서 내부 로컬 파일로 연동하기 위해
+script src="js/bootstrap.bundle.min.js" /script 를 추가하여
+페이지가 로딩되면 로딩 완료 창이 뜨도록 하였다.
+script
+window.onload= function() {alert("메인페이지로딩완료");}
+/script
+또한 플레이 버튼을 누르면 '즐거운 플레이가 되세요'가 뜨도록 추가하였다.
+a href="#" class="btnbtn-primary btn-lg" onclick="alert('즐거운플레이되세요')" 무료플레이 /a
+let 과  const는 블록 스코프 내에서만 선언이 가능하다.
+인터프리터 언어라 한 줄씩 실행한다.
+var는 재선언과 재할당이 가능하지만 let은 재선언은 불가능하고 재할당은 가능하고 const는 재선언과 재할당이 불가능하다.
+실시간 챔피언 검색하기 위한 코드가 추가되었다.
+검색버튼 식별을 위해 id가 추가되었다.
+form class="d-flex" id="searchForm">
+input class="form-control me-2" type="search" placeholder="챔피언, 뉴스검색..."aria-label="Search" id="searchInput"
+button class="btnbtn-outline-success" type="submit">검색하기 /button
+/form
+search.js 파일을 작성하고 html에 연동하였다.
+document.getElementById('searchForm').addEventListener('submit', function(e) {
+e.preventDefault(); // 폼기본동작차단(새로고침)
+const query = document.getElementById('searchInput').value.trim();
+if (!query) return;
+window.open('https://www.google.com/search?q=' + encodeURIComponent(query), '_blank');
+});
+html 최하단에 script src="js/search.js"> /script을 추가하여 검색기능을 완성하였다.
+preventDefault(); // 폼기본동작차단(새로고침) 넣어 검색을 아무것도 안하면 새로고침이 되지 않도록 추가하였다.
+항상 리슨어를 form에 등록해야한다.
