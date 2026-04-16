@@ -90,3 +90,51 @@ window.open('https://www.google.com/search?q=' + encodeURIComponent(query), '_bl
 html 최하단에 script src="js/search.js"> /script을 추가하여 검색기능을 완성하였다.
 preventDefault(); // 폼기본동작차단(새로고침) 넣어 검색을 아무것도 안하면 새로고침이 되지 않도록 추가하였다.
 항상 리슨어를 form에 등록해야한다.
+
+## 7주차수업내용
+실시간 챔피언 검색하기 기능을 추가하였다.
+search.js 자바스크립트에 챔피언과 뉴스 데이터를 추가하였다.
+또한 main.css.를 추가하여 스타일을 main.css에서 관리하도록하였다.
+기존에 index.html에 있는 스타일은 지웠다.
+검색 동작 과정은
+- 사용자가 검색어를 입력하고 'Enter'를 누른 직후, 콜스택(Call Stack)에서 performSearch
+- js가 HTML 구조를 동적으로 생성하고, CSS를 조작하여 화면을 전환한다.
+신규 3명의 멜, 유나라, 자헨의 검색 데이터를 추가하였다.
+ { name: '멜', engName: 'Mel', role: '마법사', lane: '바텀', img: 'https://ddragon.leagueoflegends.com/cdn/15.24.1/img/champion/Mel.png', difficulty: '중'},
+{ name: '유나라', engName: 'Yunara', role: '원거리', lane: '바텀', img: 'https://ddragon.leagueoflegends.com/cdn/15.24.1/img/champion/Yunara.png', difficulty: '중'},
+{ name: '자헨', engName: 'Zaahen', role: '전사', lane: '탑', img: 'https://ddragon.leagueoflegends.com/cdn/15.24.1/img/champion/Zaahen.png', difficulty: '하'},
+<div align="center">
+<img src="screenshots\스크린샷 2026-04-16 173637.png" width="45%" alt="실습1 화면">
+<img src="screenshots\스크린샷 2026-04-16 173655.png" width="45%" alt="실습2 화면">
+<img src="screenshots\스크린샷 2026-04-16 173709.png" width="45%" alt="실습3 화면">
+</div>
+<br>
+과제인 검색어가 없거나 공백일시 메인 화면으로 돌아가는 코드를 추가하였다.
+// ── 메인 화면으로 돌아가기 함수 ──────────────────────────────
+function showMainScreen() {
+    // 1. 검색 결과 섹션 숨기기
+    const searchResults = document.getElementById('searchResults');
+    if (searchResults) {
+        searchResults.classList.add('d-none');
+        searchResults.style.display = 'none';
+    }
+
+    // 2. 숨겨졌던 메인 섹션들 다시 보이기
+    // 히어로 섹션 보이기
+    const hero = document.querySelector('.hero');
+    if (hero) hero.classList.remove('d-none');
+
+    // 모든 section 태그에서 d-none 제거 (searchResults 제외)
+    document.querySelectorAll('section:not(#searchResults)').forEach(s => {
+        s.classList.remove('d-none');
+    });
+}
+기본 동작(코드)
+현재 폼의 id : searchForm
+핵심 함수 : performSearch
+데이터 셋으로 부터 : filter(조건 충족)
+키워드 가운데 출력 : searchKeywordDisplay
+필터 결과 카운팅(숫자), 0개인 경우 화면 처리
+탭(기본) 전환 : switchCategory
+기존 섹션 숨김 : display: none
+두 콘텐츠 하나만 표시 : 3항 연산자
