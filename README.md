@@ -110,7 +110,7 @@ search.js 자바스크립트에 챔피언과 뉴스 데이터를 추가하였다
 </div>
 <br>
 과제인 검색어가 없거나 공백일시 메인 화면으로 돌아가는 코드를 추가하였다.
-// ── 메인 화면으로 돌아가기 함수 ──────────────────────────────
+    // ── 메인 화면으로 돌아가기 함수 ──────────────────────────────
     function showMainScreen() {
     // 1. 검색 결과 섹션 숨기기
     const searchResults = document.getElementById('searchResults');
@@ -128,7 +128,6 @@ search.js 자바스크립트에 챔피언과 뉴스 데이터를 추가하였다
     document.querySelectorAll('section:not(#searchResults)').forEach(s => {
         s.classList.remove('d-none');
     });
-}
 기본 동작(코드)
 현재 폼의 id : searchForm
 핵심 함수 : performSearch
