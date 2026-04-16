@@ -128,6 +128,7 @@ search.js 자바스크립트에 챔피언과 뉴스 데이터를 추가하였다
     document.querySelectorAll('section:not(#searchResults)').forEach(s => {
         s.classList.remove('d-none');
     });
+    }
 기본 동작(코드)
 현재 폼의 id : searchForm
 핵심 함수 : performSearch
