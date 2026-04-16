@@ -111,7 +111,7 @@ search.js 자바스크립트에 챔피언과 뉴스 데이터를 추가하였다
 <br>
 과제인 검색어가 없거나 공백일시 메인 화면으로 돌아가는 코드를 추가하였다.
 // ── 메인 화면으로 돌아가기 함수 ──────────────────────────────
-function showMainScreen() {
+    function showMainScreen() {
     // 1. 검색 결과 섹션 숨기기
     const searchResults = document.getElementById('searchResults');
     if (searchResults) {
