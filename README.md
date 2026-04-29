@@ -138,3 +138,42 @@ search.js 자바스크립트에 챔피언과 뉴스 데이터를 추가하였다
 탭(기본) 전환 : switchCategory
 기존 섹션 숨김 : display: none
 두 콘텐츠 하나만 표시 : 3항 연산자
+
+## 9주차수업내용
+<imgsrc="/images/LOL.webp" alt="" width="30" height="24">
+<!--[변경] "Navbar" 텍스트→ 다크/라이트토글버튼-->
+<button class="btnborder-0" id="themeToggleBtn" onclick="toggleTheme()">DARK
+</button>
+를 추가해서 다크모드 라이트 모드를 추가하였다.
+자바 소스코드
+package org.acme; // 패키지선언
+Import jakarta.ws.rs.GET; // import문
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.core.MediaType;
+@Path("/hello") // 어노테이션
+public class GreetingResource{ // 클래스선언
+@GET // 어노테이션
+@Produces(MediaType.TEXT_PLAIN)
+public String hello() { // 메서드(객체안에함수) 선언
+return "Hello from QuarkusREST"; // 리턴문
+}
+}
+mysql 데이터 베이스 8.X 버전을 다운 및 설치하였다.
+접속 후 db 목록
+show databases;
+db사용 및 테이블 보기
+use mysql;
+show tables;
+최하단 user 테이블(구조및 정보 조회)
+desc user;
+select * from user; (root 계정 확인)
+항상 명령어 마무리는 ;
+기본 db: mysql
+코드를 추가하여 데이터 베이스를 연결하였다.
+프로젝트 dev 보드를 통해 연결이 잘 되었는지 확인하였다.
+데이터 베이스 연동을 하기 위해 테이블 정의 Champion.java를 추가하였다.
+@ 어노테이션이란? 주석 x
+• 코드 위에 역할을 지정
+웹 서버 접근 API 추가하기 위해 ChampionResource.java 파일을 추가하였다.
+테이블 데이터 삽입하기 위해 DataSeeder.java 파일을 추가하였다.
