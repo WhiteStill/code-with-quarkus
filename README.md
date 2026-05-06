@@ -177,3 +177,15 @@ select * from user; (root 계정 확인)
 • 코드 위에 역할을 지정
 웹 서버 접근 API 추가하기 위해 ChampionResource.java 파일을 추가하였다.
 테이블 데이터 삽입하기 위해 DataSeeder.java 파일을 추가하였다.
+
+## 10주차수업내용
+자바파일의 폴더 구조 및 파일을 정리하였다.
+오류가 생겨 명령 팔레트(Ctrl + Shift + P)에서 Java: Clean Java Language Server Workspace를 선택하고 Restart and delete를 눌러 다시 시작하여 초기화 하였다.
+로그인 네비바를 추가하였다.
+그리고 로그인 페이지를 추가하였다.
+login 폴더를 만들어서 login.html을 작성했다.
+기존 index.html에서 디자인을 복사 붙여넣기를 하였다.
+임시 로그인을 생성하였다.
+로그인 후 로그아웃 페이지도 추가로 생성하였다.
+사용자 레이블을 생성하였다.
+그리고 임시 사용자 데이터를 삽입하였다.
