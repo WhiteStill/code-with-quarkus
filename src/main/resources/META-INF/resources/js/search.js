@@ -7,7 +7,7 @@
 
 // ── 챔피언데이터──────────────────────────────────────────────
 const CHAMPIONS = [
-    { name: '아트록스', engName: 'Aatrox', role: '전사', lane: '탑', img: 'https://ddragon.leagueoflegends.com/cdn/15.24.1/img/champion/Aatrox.png', difficulty: '상'},
+    { name: '아트록스', engName: 'Aatrox', role: '전사', lane: '탑', img: 'https://ddragon.leagueoflegends.com/cdn/15.24.1/img/champion/Aatrox.png', difficulty: '상', modalId: 'modalAatrox'},
     { name: '사일러스', engName: 'Sylas', role: '마법사', lane: '정글/미드', img: 'https://ddragon.leagueoflegends.com/cdn/15.24.1/img/champion/Sylas.png', difficulty: '중'},
     { name: '애니비아', engName: 'Anivia', role: '마법사', lane: '미드', img: 'https://ddragon.leagueoflegends.com/cdn/15.24.1/img/champion/Anivia.png', difficulty: '상'},
     { name: '브라이어', engName: 'Briar', role: '전사', lane: '정글', img: 'https://ddragon.leagueoflegends.com/cdn/15.24.1/img/champion/Briar.png', difficulty: '중'},
@@ -72,7 +72,7 @@ function performSearch(query) {
             champList.innerHTML= `<div class="no-result"><h4>검색결과없음</h4><p>"${query}"에해당하는챔피언이없습니다.</p></div>`;
         } else {
             champList.innerHTML= champResults.map(c => `
-                <div class="search-result-card d-flex align-items-center p-0 overflow-hidden">
+                <div class="search-result-card d-flex align-items-center p-0 overflow-hidden" data-bs-toggle="modal" data-bs-target="#${c.modalId}">
                     <img src="${c.img}" alt="${c.name}">
                     <div class="p-3">
                             <div style="font-weight:700; font-size:1rem; color:#111;">${c.name} <span style="color:#888; font-size:0.85rem;">(${c.engName})</span></div>

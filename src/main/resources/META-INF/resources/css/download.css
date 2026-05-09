@@ -63,3 +63,42 @@ body {
 .accent-purple { 
     color: #a020f0; 
 }
+
+/* ── [추가] 테마토글버튼(폰트크기, 색상등) ──────────────── */
+#themeToggleBtn { font-size: 1.1rem; color: #fff; }
+body.light-mode #themeToggleBtn { color: #212529; }
+
+/* --- 라이트 모드 스타일 추가 --- */
+
+/* --- 히어로 섹션(사진 부분) 라이트 모드 --- */
+
+body.light-mode .hero {
+    /* 기존 어두운 그라데이션을 흰색 반투명(rgba 255, 255, 255)으로 교체 */
+    background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.5)), 
+                url('../image/down.wb.jpeg') center/cover no-repeat !important;
+}
+
+/* 1. 전체 배경과 기본 글자색 (기존 1~5번 라인 대응) */
+body.light-mode {
+    background-color: #ffffff !important;
+    color: #222222 !important;
+}
+
+/* 2. 테이블 영역 (기존 47~51번 라인 대응) */
+body.light-mode .table {
+    --bs-table-bg: #f8f9fa;
+    --bs-table-color: #212529;
+    --bs-table-border-color: #dee2e6;
+}
+
+/* 3. 카드 영역 (기존 58~61번 라인 대응) */
+body.light-mode .card {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    color: #212529;
+}
+
+/* 4. 네비바 텍스트 (기존 37~39번 라인 대응) */
+body.light-mode .nav-tabs .nav-link {
+    color: #444444;
+}

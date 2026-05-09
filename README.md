@@ -177,6 +177,12 @@ select * from user; (root 계정 확인)
 • 코드 위에 역할을 지정
 웹 서버 접근 API 추가하기 위해 ChampionResource.java 파일을 추가하였다.
 테이블 데이터 삽입하기 위해 DataSeeder.java 파일을 추가하였다.
+data-bs-toggle="modal" data-bs-target="#${c.modalId}"> 를 넣어서
+챔피온검색결과모달창띄우기를 추가하였다.
+<div align="center">
+<img src="screenshots\스크린샷 2026-05-06 143414.png"실습4 화면">
+</div>
+<br>
 
 ## 10주차수업내용
 자바파일의 폴더 구조 및 파일을 정리하였다.
@@ -189,3 +195,11 @@ login 폴더를 만들어서 login.html을 작성했다.
 로그인 후 로그아웃 페이지도 추가로 생성하였다.
 사용자 레이블을 생성하였다.
 그리고 임시 사용자 데이터를 삽입하였다.
+추가적으로 다운로드 부분의 다크모드, 라이트모드 토글을 추가하였다.
+로그인 화면에 라이트모드, 다크모드를 연동해서 과제를 완료하였다.
+<div align="center">
+<img src="screenshots\스크린샷 2026-05-09 184712.png"실습5 화면">
+<img src="screenshots\스크린샷 2026-05-09 190824.png"실습6 화면">
+<img src="screenshots\스크린샷 2026-05-09 190837.png"실습7 화면">
+</div>
+<br>

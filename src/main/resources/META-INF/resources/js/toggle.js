@@ -14,3 +14,11 @@ function toggleTheme() {
         navbar.classList.add('navbar-dark', 'bg-dark');
     }
 }
+
+// 1. 문서에서 ID가 'themeToggleBtn'인 요소를 찾기
+const themeBtn = document.getElementById('themeToggleBtn');
+
+//2. 버튼이 존재할 경우에만 클릭 이벤트(addEventListener)를 연결하기.
+if (themeBtn) {
+    themeBtn.addEventListener('click', toggleTheme);
+}
