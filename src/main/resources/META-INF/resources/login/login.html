@@ -79,11 +79,15 @@
             <label class="form-label">아이디</label>
             <input type="text" class="form-control"
                 name="username" placeholder="아이디 입력" required>
-    </div>
+                <!-- 에러 메시지 출력 위치 -->
+                <div id="passwordMsg" class="text-danger small mt-1"></div>
+            </div>
     <div class="mb-3 text-start">
         <label class="form-label">패스워드</label>
         <input type="password" class="form-control"
             name="password" placeholder="패스워드 입력" required>
+            <!-- 에러 메시지 출력 위치 -->
+            <div id="usernameMsg" class="text-danger small mt-1"></div>
         </div>
         <button type="submit" class="btn btn-primary w-100">로그인</button>
         <!–로그인버튼아래추가-->
@@ -94,5 +98,8 @@
             </form>
         </div>
     </section>
-
+    
+<!-- 스크립트 연결 (기존 파일 뒤에 추가) -->
+<script src="../js/input_check.js"></script> <!-- showError, clearError가 있는 파일 -->
+<script src="../js/login.js"></script>
 <script src="../js/toggle.js"></script>

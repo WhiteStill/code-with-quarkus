@@ -1,7 +1,15 @@
 /* ── 기본 레이아웃 ──────────────────────────────────────────── */
 body { background-color: #0a0e17; color: #fff; font-family: 'Arial', sans-serif; }
 .navbar { background-color: #000; }
-.hero { background: linear-gradient(to bottom, #1e1e1e, #0a0e17); min-height: 60vh; }
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+        url('../image/down.wb.jpeg') center/cover no-repeat !important;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
 /* ── 강조 색상 ──────────────────────────────────────────────── */
 .accent-purple { color: #a020f0; }
@@ -82,3 +90,7 @@ body.light-mode .hero { background: linear-gradient(to bottom, #dce3ea, #f8f9fa)
 body.light-mode .card { background-color: #ffffff; color: #212529; border: 1px solid #dee2e6; }
 body.light-mode .card-title { color: #212529; }
 body.light-mode .card-text { color: #555; }
+body.light-mode h1, body.light-mode h2, body.light-mode .hero h1,body.light-mode .hero p {
+    color: #c8aa6e !important;
+    text-shadow: none;
+}

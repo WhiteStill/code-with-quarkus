@@ -222,3 +222,66 @@ SHA-256 해시, 모달창을 추가하였다. (패스워드 해시 암호화 후
 /register_check엔드포인트를 추가하였다.
 /register_success엔드포인트를 추가하였다.
 가입 완료 페이지까지 완료 하였다.
+추가로 과제로 과제 코드를 작성하였다.
+function validateAndLogin() {
+    let valid = true;
+
+    // 입력값 가져오기
+    const usernameInput = document.getElementById('usernameInput');
+    const passwordInput = document.getElementById('passwordInput');
+    
+    const username = usernameInput.value.trim();
+    const password = passwordInput.value;
+
+    // ① 아이디 유효성 검사 (4~20자 영문/숫자)
+    const usernameRegex = /^[a-zA-Z0-9]{4,20}$/;
+    if (!usernameRegex.test(username)) {
+        showError('usernameInput', 'usernameMsg', '아이디는 4~20자의 영문 및 숫자여야 합니다.');
+        valid = false;
+    } else {
+        clearError('usernameInput', 'usernameMsg');
+    }
+
+    // ② 패스워드 유효성 검사 (8자 이상, 영문+숫자+특수문자 포함)
+    const passwordRegex = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$/;
+    if (!passwordRegex.test(password)) {
+        showError('passwordInput', 'passwordMsg', '비밀번호는 8자 이상이며 영문, 숫자, 특수문자를 포함해야 합니다.');
+        valid = false;
+    } else {
+        clearError('passwordInput', 'passwordMsg');
+    }
+
+    // ③ 모든 항목 통과 시 로그인 실행
+    if (valid) {
+        // 기존에 정의된 submitLogin() 함수 호출
+        if (typeof submitLogin === 'function') {
+            submitLogin();
+        } else {
+            console.log("로그인 성공: 서버로 데이터를 전송합니다.");
+            // 실제 제출 로직이 없다면 여기에 추가 (예: document.getElementById('loginForm').submit();)
+        }
+    }
+}
+그리고 이제 오류 메시지를 출력할 부분도 추가하였다.
+<!-- 아이디 입력 필드 -->
+<div class="mb-3">
+    <label for="usernameInput" class="form-label">아이디</label>
+    <input type="text" class="form-control" id="usernameInput" name="username" placeholder="아이디 입력">
+    <!-- 에러 메시지 출력 위치 -->
+    <div id="usernameMsg" class="text-danger small mt-1"></div>
+</div>
+
+<!-- 패스워드 입력 필드 -->
+<div class="mb-3">
+    <label for="passwordInput" class="form-label">패스워드</label>
+    <input type="password" class="form-control" id="passwordInput" name="password" placeholder="패스워드 입력">
+    <!-- 에러 메시지 출력 위치 -->
+    <div id="passwordMsg" class="text-danger small mt-1"></div>
+</div>
+
+<!-- 로그인 버튼 (onclick 함수 연결) -->
+<button type="button" class="btn btn-primary w-100" onclick="validateAndLogin()">로그인</button>
+
+<!-- 스크립트 연결 (기존 파일 뒤에 추가) -->
+<script src="../js/input_check.js"></script> <!-- showError, clearError가 있는 파일 -->
+<script src="../js/login.js"></script>
