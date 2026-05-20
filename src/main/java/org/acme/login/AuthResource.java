@@ -12,6 +12,19 @@ import io.vertx.ext.web.RoutingContext;
 @Path("/") // 기본경로가최상위/
 public class AuthResource{
     // GET /login → 로그인HTML 페이지반환
+    // GET / → 세션유무에따라메인페이지분기
+    @GET
+    @Produces(MediaType.TEXT_HTML)
+    public Response mainPage() {
+        String loginUser = context.session().get("loginUser");
+        System.out.println("=== [GET /] 세션ID : " + context.session().id());
+        System.out.println("=== [GET /] loginUser: " + loginUser);
+        String htmlPath = (loginUser != null)
+                ? "META-INF/resources/login/main_after_login.html"
+                : "META-INF/resources/main_index.html";
+        InputStream html = getClass().getClassLoader().getResourceAsStream(htmlPath);
+        return Response.ok(html).build();
+    }
     @GET
     @Path("/login") // 경로명시
     @Produces(MediaType.TEXT_HTML) // 서버→클라
