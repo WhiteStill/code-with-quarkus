@@ -33,7 +33,7 @@
         body.classList.toggle('light-mode');
 
         if (btn) {
-            btn.textContent = body.classList.contains('light-mode') ? 'LIGHT' : 'DARK';
+            btn.textContent = body.classList.contains('light-mode') ? '☀️LIGHT' : '🌙DARK';
         }
 
         if (navbar) {

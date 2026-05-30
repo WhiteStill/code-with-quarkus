@@ -379,3 +379,45 @@ async function submitLogin() {
     }
 } 
 부분에 오류가 떠서 추가 수정작업을 실시하였다.
+
+## 13주차수업내용
+프로필 페이지를 추가하였다.
+프로필 페이지의 화면을 구성하였다.
+uploads\profile에 사진을 넣어 프로필 이미지를 생성하였다.
+/profile/upload –엔드포인트를 추가하였다.
+기본 main_index.html에 기본 알림창을 지우고 Toast로 구현하였다.
+네비바의 사용자명 동적 표시을 추가적으로 구현하였다.
+회원정보 수정 폼을 추가하였다.
+<div align="center">
+<img src="screenshots\스크린샷 2026-05-30 210436.png"실습9 화면">
+</div>
+<br>
+회원정보 수정 폼의 기존 값 자동 채움, 정규식 검사를 추가하였다.
+회원정보 수정의 엔드포인트, 결과 및 메시지를 수정, 추가하였다.
+<div align="center">
+<img src="screenshots\스크린샷 2026-05-30 214641.png"실습10 화면">
+</div>
+<br>
+비밀번호 변경 폼 추가하였다.
+<div align="center">
+<img src="screenshots\스크린샷 2026-05-30 224756.png"실습11 화면">
+</div>
+<br>
+비밀번호 유효성 검사 + 해시값을 수정하였다.
+<div align="center">
+<img src="screenshots\스크린샷 2026-05-30 223716.png"실습12 화면">
+</div>
+<br>
+비밀번호 변경 엔드포인트, 엔드포인트(로그 아웃)을 수정하였다.
+비밀번호 변경 성공 Toast 처리를 교체하였다.
+<div align="center">
+<img src="screenshots\스크린샷 2026-05-30 223759.png"실습13 화면">
+</div>
+<br>
+나머지 알림창을 토스트로 교체하였다. 로그인이후 화면, 회원가입 화면, 회원가입 완료 화면
+<div align="center">
+<img src="screenshots\스크린샷 2026-05-30 234407.png"실습14 화면">
+<img src="screenshots\스크린샷 2026-05-30 234350.png"실습15 화면">
+<img src="screenshots\스크린샷 2026-05-30 235053.png"실습16 화면">
+</div>
+<br>

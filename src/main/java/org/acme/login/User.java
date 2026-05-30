@@ -26,17 +26,21 @@ import jakarta.persistence.Column;
 public class User extends PanacheEntity {
 public String username;
 public String password; // SHA-256 해시값저장
+
 @Column(unique = true) // 이메일중복방지
-public String email;
-public String phone; // 연락처
-// 아이디로조회
+    public String email;
+    public String phone; // 연락처
+    // 아이디로조회
 
-public static User findByUsername(String username) {
-    return find("username", username).firstResult();
-}
+    // 신규추가: 프로필사진파일명
+    public String profileImage; // 저장된파일명(UUID 기반)
 
-// 이메일로조회
-public static User findByEmail(String email) {
-    return find("email", email).firstResult();
-}
+    public static User findByUsername(String username) {
+        return find("username", username).firstResult();
+    }
+
+    // 이메일로조회
+    public static User findByEmail(String email) {
+        return find("email", email).firstResult();
+    }
 }
